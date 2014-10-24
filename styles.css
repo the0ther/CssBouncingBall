@@ -12,8 +12,7 @@
     border-radius: 50%;
     position: absolute;
     left: 50%;
-    z-index :2;
-    /*display: none;*/
+    z-index 2;
     border: 2px solid #FFC52F;
     width: 80px;
     height: 80px;
@@ -38,7 +37,10 @@
     bottom:10px;
     left:50%;
     z-index:1;
-    /*display:none;*/
+    width: 120px;
+    height: 24px;
+    margin-left: -60px;
+    opacity: 0.2;
 }
 
 @-webkit-keyframes bounce {
@@ -50,12 +52,34 @@
 }
 
 .bounce-ball {
-    animation-name: bounce;
-    
-    -webkit-animation: bounce 3s linear 0s infinite alternate;
-    animation: bounce 3s linear 0s infinite alternate;
+    -webkit-animation-name: bounce;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    /* strange, but it looks like the browser magically swaps easing-out/easing-in all by itself
+    /* easeInQuad above, easeOutQuad is: cubic-bezier(0.25, 0.46, 0.45, 0.94); */
 }
 
-.throb-shadow {
+@-webkit-keyframes throb-shadow {
+    0% { 
+        width: 120px;
+        height: 24px;
+        margin-left: -60px;
+        opacity: 0.2;
+    }
+    100% {
+        width: 80px;
+        height: 20px;
+        margin-left: -40px;
+        opacity: 1;
+    }
+}
 
+.throb-shadow-out {
+    -webkit-animation-name: throb-shadow;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
 }
