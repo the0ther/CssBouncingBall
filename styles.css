@@ -1,4 +1,4 @@
-#container {
+#stage {
     width:400px;
     height:400px;
     margin:auto;
@@ -19,7 +19,6 @@
     bottom: 280px;
     margin-left: -40px;
 
-    /*------------- GRADIENT GENERATED FROM http://www.colorzilla.com/gradient-editor/ ----------------------- */
     background: rgb(79,38,130); /* Old browsers */
     background: -moz-linear-gradient(-45deg, rgba(79,38,130,1) 1%, rgba(112,112,112,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right bottom, color-stop(1%,rgba(79,38,130,1)), color-stop(100%,rgba(112,112,112,1))); /* Chrome,Safari4+ */
@@ -76,7 +75,7 @@
     }
 }
 
-.throb-shadow-out {
+.throb-shadow {
     -webkit-animation-name: throb-shadow;
     -webkit-animation-duration: 1s;
     -webkit-animation-iteration-count: infinite;
